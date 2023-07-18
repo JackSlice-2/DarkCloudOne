@@ -36,10 +36,16 @@ const SongItem: React.FC<SongItemProps> = ({
                     {data.title}
                 </p>
                 <p
-                className="text-neutral-400 text-sm pb-4 w-full truncate"
+                className="text-neutral-400 text-sm w-full truncate"
                 > 
-                By {data.author} 
+                By {data.author}
                 </p>
+                <p
+                className="text-neutral-400 text-sm w-full truncate"
+                > 
+                {data.album}
+                </p>
+                
             </div>
             <div className="absolute bottom-24 right-5">
                 <PlayButton />

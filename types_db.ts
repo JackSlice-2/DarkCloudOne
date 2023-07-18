@@ -141,6 +141,7 @@ export interface Database {
       songs: {
         Row: {
           author: string | null
+          album: string | null
           created_at: string | null
           id: number
           image_path: string | null
@@ -150,6 +151,7 @@ export interface Database {
         }
         Insert: {
           author?: string | null
+          album?: string | null
           created_at?: string | null
           id?: number
           image_path?: string | null
@@ -159,6 +161,7 @@ export interface Database {
         }
         Update: {
           author?: string | null
+          album?: string | null
           created_at?: string | null
           id?: number
           image_path?: string | null

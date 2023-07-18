@@ -47,6 +47,9 @@ const MediaItem: React.FC<MediaItemProps> = ({
                     <p className="text-neutral-400 text-sm truncate">
                         {data.author}
                     </p>
+                    <p className="text-neutral-400 text-sm truncate">
+                        {data.album}
+                    </p>
                 </div>   
         </div>
     );

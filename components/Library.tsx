@@ -25,6 +25,7 @@ const Library: React.FC<LibraryProps> = ({
     const onClick = () => {
         if (!user) {
             return authModal.onOpen();
+
         } 
         
         return uploadModal.onOpen();
