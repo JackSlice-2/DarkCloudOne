@@ -15,7 +15,7 @@ interface SongInfo {
   title: string;
   artist: string;
   album: string;
-  picture: string;
+  picture: string | Buffer;
 }
 
 const UploadModal: React.FC = () => {
@@ -44,8 +44,6 @@ const UploadModal: React.FC = () => {
     }
   });
 
-  const songFile = watch('song');
-
   const onChange = (open: boolean) => {
     if (!open) {
       reset();
@@ -65,7 +63,12 @@ const UploadModal: React.FC = () => {
         const { title, artist, album } = common;
         const picture = common.picture?.[0]?.data;
 
-        setSongInfo({ title, artist, album, picture });
+        setSongInfo({
+          title: title || '',
+          artist: artist || '',
+          album: album || '',
+          picture: picture || ''
+        });
         setImageFile(file);
         setValue('title', title);
         setValue('author', artist);
