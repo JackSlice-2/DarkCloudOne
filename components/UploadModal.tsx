@@ -192,7 +192,6 @@ const UploadModal: React.FC = () => {
         </div>
         {songInfo && songInfo.picture && (
           <div>
-            <img src={URL.createObjectURL(imageFile)} alt="Cover" />
             <p>Title: {songInfo.title}</p>
             <p>Artist: {songInfo.artist}</p>
             <p>Album: {songInfo.album}</p>
